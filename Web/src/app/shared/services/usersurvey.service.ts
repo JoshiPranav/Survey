@@ -19,7 +19,7 @@ export class UserSurveyService {
   }
 
   constructor(private http: HttpClient) { }
-  
+
   updateUserNickName(nickname: string) {
     this.UserSurvey.nickname = nickname;
   }

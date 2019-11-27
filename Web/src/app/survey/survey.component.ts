@@ -23,7 +23,7 @@ export class SurveyComponent implements OnInit {
 
   ngOnInit() {
      this.survey = this.surveyService.Survey;
-     if(this.survey) {
+     if (this.survey) {
        this.currentQuestion = this.survey.surveyQuestions[this.currentQuestionIndex];
      }
      this.selectedAnswer = null;

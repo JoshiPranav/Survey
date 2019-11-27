@@ -22,7 +22,7 @@
 !.vscode/extensions.json
 .vs/*
 Api/.vs/*
-/Web/.vscode/*
+Web/.vscode/*
 
 # misc
 /.sass-cache
@@ -241,3 +241,4 @@ project.lock.json
 *.feature.cs
 *.feature.xlsx.*
 *.Specs_*.html
+

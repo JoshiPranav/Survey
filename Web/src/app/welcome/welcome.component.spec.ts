@@ -4,6 +4,7 @@ import { UserSurveyService } from '../shared/services/usersurvey.service';
 import { NgForm, FormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MockUserSurveyService } from '../shared/mocks/mock';
 
 describe('WelcomeComponent', () => {
   let component: WelcomeComponent;
@@ -18,52 +19,36 @@ describe('WelcomeComponent', () => {
         HttpClientTestingModule
       ],
       declarations: [WelcomeComponent],
-      providers: [UserSurveyService]
+      providers: [
+        { provide: UserSurveyService, useClass: MockUserSurveyService }
+      ]
     })
-    .compileComponents();
-
-    userSurveyService = TestBed.get(UserSurveyService);
+    .compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(WelcomeComponent);
+      component = fixture.componentInstance;
+      userSurveyService = TestBed.get(UserSurveyService);
+      fixture.detectChanges();
+    });
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WelcomeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('form onsubmit should set nickname', () => {
-    const testForm = <NgForm>{
+  it('form onsubmit should set nickname and survey id', () => {
+    const testForm = {
       value: {
         nickname: 'John'
       }
-    };
-    component.onSubmit(testForm);
-    expect(userSurveyService.UserSurvey.nickname).toBe('John');
-  });
+    } as NgForm;
 
-  it('form onsubmit should set surveyId', () => {
-    const testForm = <NgForm>{
-      value: {
-        nickname: 'John'
-      }
-    };
     component.onSubmit(testForm);
+
+    expect(userSurveyService.UserSurvey.nickname).toBe('John');
     expect(userSurveyService.UserSurvey.surveyId).toBe(1);
   });
-
-  // it('form onsubmit should navigate to survey componenent', () => {
-  //   const testForm = <NgForm>{
-  //     value: {
-  //       nickname: 'John'
-  //     }
-  //   };
-  //   component.onSubmit(testForm);
-  //   //const navigateSpy = spyOn(router, 'navigate');
-  //   //expect(mockRouter.navigate).toHaveBeenCalledWith(['/survey/1']);
-  //   expect(userSurveyService.UserSurvey.surveyId).toBe(1);
-  // });
 });
