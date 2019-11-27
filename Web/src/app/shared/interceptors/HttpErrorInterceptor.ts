@@ -14,10 +14,10 @@ export class HttpErrorInterceptor implements HttpInterceptor {
       .pipe(
         tap(data => console.log(data)),
         catchError((error: HttpErrorResponse) => {
-          //TODO: This is very basic error handling needs to be further enhanced
+          // Needs to be enhanced for further error handling
           if(!(error.error instanceof ErrorEvent)) {
             if(error.status === 400 || error.status == 404) {
-              this.errorMessage = error.error;
+              this.errorMessage = error.status + ' :: ' + error.error;
             }
             else {
             this.errorMessage = error.message;

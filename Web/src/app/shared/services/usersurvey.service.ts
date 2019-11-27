@@ -11,7 +11,7 @@ import { environment } from '../../../environments/environment';
 export class UserSurveyService {
 
   public UserSurvey: UserSurvey;
-  private endpoint = environment.baseUrl + 'UserSurvey';
+  private endpoint = environment.baseUrl + '/api/usersurvey';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -20,8 +20,8 @@ export class UserSurveyService {
 
   constructor(private http: HttpClient) { }
 
-  updateUserNickName(nickname: string) {
-    this.UserSurvey.nickname = nickname;
+  createNewUserSurvey(userNickname: string, surveyId: number) {
+    this.UserSurvey = new UserSurvey(userNickname, surveyId);
   }
 
   updateUserSurveyAnswer(questionId: number, answerId: number) {
@@ -34,9 +34,5 @@ export class UserSurveyService {
         map((data: any) => {
           return true;
         }));
-  }
-
-  createNewUserSurvey(userNickname: string, surveyId: number) {
-    this.UserSurvey = new UserSurvey(userNickname, surveyId);
   }
 }

@@ -9,12 +9,11 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class SurveyService {
-  private endpoint = environment.baseUrl + 'survey/';
   public Survey: Survey;
   constructor(private http: HttpClient) { }
 
   getSurvey(surveyId: number): Observable<boolean> {
-    return this.http.get(this.endpoint + surveyId)
+    return this.http.get(environment.baseUrl + '/api/survey/' + 1)
       .pipe(
         map((data: any) => {
           this.Survey = data;
