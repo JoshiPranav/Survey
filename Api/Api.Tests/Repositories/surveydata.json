@@ -1,0 +1,70 @@
+[
+    {
+        "Name": "General Survey",
+        "Description": "This is a general survey about favourite things",
+        "SurveyQuestions": [
+            {
+                "QuestionText": "What is your favourite color?",
+                "SortOrder": 2,
+                "SurveyQuestionAnswers": [
+                    {
+                        "AnswerText": "Red",
+                        "SortOrder": 1
+                    },
+                    {
+                        "AnswerText": "Blue",
+                        "SortOrder": 2
+                    },
+                    {
+                        "AnswerText": "Green",
+                        "SortOrder": 3
+                    },
+                    {
+                        "AnswerText": "Yellow",
+                        "SortOrder": 4
+                    }
+                ]
+            },
+            {
+                "QuestionText": "What is your favourite animal?",
+                "SortOrder": 1,
+                "SurveyQuestionAnswers": [
+                    {
+                        "AnswerText": "Dog",
+                        "SortOrder": 2
+                    },
+                    {
+                        "AnswerText": "Cat",
+                        "SortOrder": 1
+                    },
+                    {
+                        "AnswerText": "Lion",
+                        "SortOrder": 3
+                    }
+                ]
+            },
+            {
+                "QuestionText": "What is your favourite bird?",
+                "SortOrder": 3,
+                "SurveyQuestionAnswers": [
+                    {
+                        "AnswerText": "Parrot",
+                        "SortOrder": 1
+                    },
+                    {
+                        "AnswerText": "Eagle",
+                        "SortOrder": 2
+                    },
+                    {
+                        "AnswerText": "Owl",
+                        "SortOrder": 3
+                    },
+                    {
+                        "AnswerText": "Hummingbird",
+                        "SortOrder": 4
+                    }
+                ]
+            }
+        ]
+    }
+]
