@@ -2,7 +2,7 @@
 	+ Clone / Download solution
 	+ DB Connection string is configured at <root>\Api\Api\appsettings.json.
 	+ API deployment config is configured at <root>\Api\Api\Properties\launchsettings.json
-	+ Please update web settings at: <root>\Web\app\environments\environments.ts (base url) is needed.
+	+ Please update web settings at: <root>\Web\app\environments\environments.ts (base url if needed)
 
 ## Run app
 	+ Navigate to the <root>\Api\Api
