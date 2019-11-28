@@ -2,14 +2,14 @@
 	+ Clone / Download solution
 	+ DB Connection string is configured at <root>\Api\Api\appsettings.json.
 	+ API deployment config is configured at <root>\Api\Api\Properties\launchsettings.json
-	+ Please update web settings at: <root>\Web\app\environments\environments.ts
+	+ API url for Web is configured at <root>\Web\app\environments\environments.ts
 
 ## Run app
-	+ Navigate to the <root>\Api\Api
-	+ run command: dotnet run. This will deploy the DB (above connnection string) and run the API (listening at above url)
-	+ Navigate to <root>\Web
-	+ Run npm install
-	+ Run ng serve
+	+ To deploy the API: in powershell, navigate to the <root>\Api\Api and
+	+ run command: dotnet run
+	+ To run Web app: navigate to <root>\Web and
+	+ run command: npm install and
+	+ run command: ng serve
 
 ## Run web unit tests
 	+ Run: ng test (for web)
