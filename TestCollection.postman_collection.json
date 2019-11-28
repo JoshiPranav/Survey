@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "543832da-3258-4913-8c37-d8875b841194",
+		"_postman_id": "ac13330b-0609-46d0-8b4e-d496dfa6c739",
 		"name": "TestCollection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -27,12 +27,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:44384/api/UserSurvey",
+					"raw": "https://localhost:5001/api/UserSurvey",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "44384",
+					"port": "5001",
 					"path": [
 						"api",
 						"UserSurvey"
@@ -47,12 +47,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:44384/api/survey/1",
+					"raw": "https://localhost:5001/api/survey/1",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "44384",
+					"port": "5001",
 					"path": [
 						"api",
 						"survey",
