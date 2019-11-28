@@ -11,6 +11,6 @@
 	+ run command: npm install and
 	+ run command: ng serve
 
-## Run web unit tests
+## Run unit tests
 	+ Run: ng test (for web)
 	+ Run: dotnet test (for API)
