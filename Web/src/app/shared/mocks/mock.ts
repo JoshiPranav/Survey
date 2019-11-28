@@ -1,5 +1,7 @@
 import { UserSurvey } from '../entities/usersurvey';
 import { Survey } from '../entities/survey';
+import { Observable } from 'rxjs/internal/Observable';
+import { of } from 'rxjs';
 
 export class MockSurvey {
   public survey: Survey = {
@@ -105,7 +107,10 @@ export class MockUserSurveyService {
     nickname: 'j',
     surveyId: 1
  };
-
+ 
+  postSurveyData(): Observable<boolean> {
+    return of(true);
+  }
  updateUserSurveyAnswer(questionId: number, answerId: number) { }
  createNewUserSurvey(userNickname: string, surveyId: number) {
     this.UserSurvey = new UserSurvey(userNickname, surveyId);
