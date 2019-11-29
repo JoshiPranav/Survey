@@ -13,7 +13,7 @@ export class SurveyService {
   constructor(private http: HttpClient) { }
 
   getSurvey(surveyId: number): Observable<boolean> {
-    return this.http.get(environment.baseUrl + '/api/survey/' + 1)
+    return this.http.get(environment.baseUrl + '/api/survey/' + surveyId)
       .pipe(
         map((data: any) => {
           this.Survey = data;
